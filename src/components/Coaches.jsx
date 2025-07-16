@@ -1,7 +1,14 @@
-import React from 'react';
 import { Award, Star } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+
+// Import coach images
+import FilipePfp from '../assets/coaches/Filipe/Filipe_pfp.jpg';
+import AndressaPfp from '../assets/coaches/Andressa/Andressa_pfp.jpg';
+import PedroPfp from '../assets/coaches/Pedro/Pedro_pfp.jpg';
+import MarcaoPfp from '../assets/coaches/Marcao/Marcao_pfp.jpg';
+import RafaelPfp from '../assets/coaches/Rafael/Rafael_pfp.jpg';
 
 const coaches = [
 	{
@@ -10,15 +17,15 @@ const coaches = [
 		specialty: 'HEAD COACH - KICKBOXING, BOXE, BAG WORKOUT',
 		experience: 'Mais de 15 anos',
 		achievements: 'Especialista em desportos de combate e preparação física',
-		image: 'https://images.pexels.com/photos/4761670/pexels-photo-4761670.jpeg',
+		image: FilipePfp,
 	},
 	{
-		id: 'andressa',
-		name: 'Andressa',
+		id: 'andressa-baptista',
+		name: 'Andressa Baptista',
 		specialty: 'MUAY THAI',
 		experience: 'Mais de 10 anos',
 		achievements: 'Campeã e instrutora de Muay Thai',
-		image: 'https://images.pexels.com/photos/4761665/pexels-photo-4761665.jpeg',
+		image: AndressaPfp,
 	},
 	{
 		id: 'pedro-paiva',
@@ -26,7 +33,7 @@ const coaches = [
 		specialty: 'KARATÉ',
 		experience: 'Mais de 20 anos',
 		achievements: 'Instrutor de Karaté e atleta premiado',
-		image: 'https://images.pexels.com/photos/3601094/pexels-photo-3601094.jpeg',
+		image: PedroPfp,
 	},
 	{
 		id: 'marco-antonio',
@@ -34,7 +41,15 @@ const coaches = [
 		specialty: 'BJJ',
 		experience: 'Mais de 15 anos',
 		achievements: 'Faixa preta e instrutor de Jiu-Jitsu',
-		image: 'https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg',
+		image: MarcaoPfp,
+	},
+	{
+		id: 'rafael',
+		name: 'Rafael',
+		specialty: 'MMA',
+		experience: 'Mais de 10 anos',
+		achievements: 'Lutador profissional com múltiplos campeonatos',
+		image: RafaelPfp,
 	},
 ];
 
@@ -83,7 +98,7 @@ const Coaches = () => {
 								<img
 									src={coach.image}
 									alt={coach.name}
-									className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+									className="w-full h-64 object-contain bg-nfk-gray group-hover:scale-105 transition-transform duration-300"
 								/>
 								<div className="absolute inset-0 bg-gradient-to-t from-nfk-black via-transparent to-transparent"></div>
 								<div className="absolute inset-0 bg-nfk-red bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
